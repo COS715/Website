@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
             
             // Добавляем анимацию исчезновения
             content.classList.remove('in');
+            content.classList.add('fade');
             
             // Ждем завершения анимации исчезновения перед загрузкой новой страницы
             setTimeout(() => loadPage(targetUrl), 500); // 500 мс - время анимации
@@ -41,24 +42,28 @@ function loadPage(url) {
             const doc = parser.parseFromString(this.responseText, 'text/html');
             const newContent = doc.querySelector('.container').innerHTML;
 
-            // Заменяем старый контент на новый
-            content.innerHTML = newContent;
+            // Убираем класс "in" для начала анимации
+            content.classList.remove('in');
+            content.classList.add('fade'); // Добавляем класс "fade"
 
-            // Обновляем URL в адресной строке
-            history.pushState(null, '', url);
-
-            // Проверяем, если загруженная страница - это главная
-            if (url.endsWith('index.html')) {
-                footer.style.display = ''; // Показываем футер
-            } else {
-                footer.style.display = 'none'; // Скрываем футер
-            }
-
-            // Добавляем анимацию появления
+            // Ждем завершения анимации перед заменой контента
             setTimeout(() => {
-                content.classList.remove('fade');
-                content.classList.add('in');
-            }, 50);
+                content.innerHTML = newContent; // Заменяем контент
+
+                // Обновляем URL в адресной строке
+                history.pushState(null, '', url);
+
+                // Проверяем, если загруженная страница - это главная
+                if (url.endsWith('index.html')) {
+                    footer.style.display = ''; // Показываем футер
+                } else {
+                    footer.style.display = 'none'; // Скрываем футер
+                }
+
+                // Добавляем анимацию появления
+                content.classList.remove('fade'); // Убираем класс "fade" после замены
+                content.classList.add('in'); // Добавляем класс "in" для появления
+            }, 500); // 500 мс - время анимации исчезновения
         } else {
             console.error('Ошибка загрузки страницы:', this.status);
         }
