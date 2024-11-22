@@ -8,8 +8,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Применяем анимацию "входа" для первого отображения страницы
     content.classList.add('fade'); // Добавляем класс fade
+
+    // Убедитесь, что контент загружается с классом 'in' через небольшой промежуток времени
     setTimeout(() => {
-        content.classList.add('in'); // Добавляем класс in через небольшой промежуток времени
+        content.classList.add('in'); // Добавляем класс in
     }, 50);
 
     links.forEach(link => {
