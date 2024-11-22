@@ -156,20 +156,19 @@ h1, h2 {
 
 }
 .drawings-gallery {
-    display: flex;
-    flex-wrap: wrap; /* Allows items to wrap to the next line */
-    justify-content: center; /* Center the items */
-    margin-top: 20px; /* Add some space above the gallery */
+    display: flex; /* Используем flexbox для расположения элементов в ряд */
+    flex-wrap: wrap; /* Позволяет элементам переноситься на следующую строку при нехватке места */
+    justify-content: center; /* Центрируем элементы по горизонтали */
 }
 
 .drawing-item {
-    margin: 10px; /* Space between drawings */
-    text-align: center; /* Center the caption under the image */
+    margin: 10px; /* Добавляем отступ между элементами */
+    text-align: center; /* Центрируем текст под изображением */
 }
 
 .drawing-item img {
-    width: 300px; /* Set a fixed width for images */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ограничиваем ширину изображений */
+    height: auto; /* Поддерживаем пропорции изображений */
 }
 
 .caption {
