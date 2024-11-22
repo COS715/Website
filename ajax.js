@@ -4,15 +4,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const content = document.querySelector('.container');
 
     // Проверяем, является ли текущая страница главной
-    const isHomePage = window.location.pathname.endsWith('index.html');
-    console.log('Текущая страница:', window.location.pathname);
-    console.log('Является ли главной страницей:', isHomePage);
+    const isHomePage = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
 
     if (isHomePage) {
         footer.style.display = ''; // Показываем футер
     } else {
         footer.style.display = 'none'; // Скрываем футер
     }
+});
 
     // Применяем анимацию "входа" для первого отображения страницы
     content.classList.add('fade');
