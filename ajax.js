@@ -29,6 +29,14 @@ function loadPage(url) {
             // Заменяем старый контент на новый
             content.innerHTML = newContent;
 
+            // Проверяем, если загруженная страница - это главная
+            const footer = document.getElementById('footer');
+            if (url.endsWith('index.html')) {
+                footer.style.display = ''; // Показываем футер
+            } else {
+                footer.style.display = 'none'; // Скрываем футер
+            }
+
             // Добавляем анимацию появления
             setTimeout(() => content.classList.add('in'), 50); // Добавляем класс 'in' с небольшой задержкой
         } else {
@@ -42,3 +50,4 @@ function loadPage(url) {
 
     xhr.send();
 }
+
