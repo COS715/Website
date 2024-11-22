@@ -156,28 +156,26 @@ h1, h2 {
 
 }
 .drawings-gallery {
-    display: flex; /* Используем flexbox для расположения элементов в ряд */
-    flex-wrap: wrap; /* Позволяет элементам переноситься на следующую строку */
-    justify-content: center; /* Центрируем элементы по горизонтали */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
 }
 
 .drawing-item {
-    margin: 10px; /* Отступ между элементами */
-    text-align: center; /* Центрируем текст под изображением */
+    margin: 10px; /* Space between items */
+    text-align: center; /* Center text under images */
 }
 
-.drawing-item img {
-    max-width: 100%; /* Ограничиваем ширину изображений */
-    height: auto; /* Поддерживаем пропорции изображений */
-}
-/* Устанавливаем ширину для первых двух изображений */
+
+/* Set widths for first two images */
 .drawing-item:nth-child(1),
 .drawing-item:nth-child(2) {
-    flex: 0 0 45%; /* Каждое из первых двух изображений занимает 45% ширины контейнера */
+    flex: 0 0 45%; /* Each takes 45% of the container width */
 }
 /* Устанавливаем ширину для третьего изображения */
+/* Set width for the third image */
 .drawing-item:nth-child(3) {
-    flex: 0 0 100%; /* Третье изображение занимает 100% ширины контейнера */
+    flex: 0 0 100%; /* Takes full width of the container */
 }
 .caption {
     color: white; /* Caption color */
