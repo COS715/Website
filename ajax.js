@@ -7,11 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
     footer.style.display = 'none';
 
     // Применяем анимацию "входа" для первого отображения страницы
-    content.classList.add('fade'); // Добавляем класс fade
-
-    // Убедитесь, что контент загружается с классом 'in' через небольшой промежуток времени
+    content.classList.add('fade');
     setTimeout(() => {
-        content.classList.add('in'); // Добавляем класс in
+        content.classList.add('in');
     }, 50);
 
     links.forEach(link => {
@@ -20,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const targetUrl = this.href; // Получаем URL страницы
             
             // Добавляем анимацию исчезновения
-            content.classList.remove('in'); // Убираем класс 'in' для начала анимации исчезновения
+            content.classList.remove('in');
             
             // Ждем завершения анимации исчезновения перед загрузкой новой страницы
             setTimeout(() => loadPage(targetUrl), 500); // 500 мс - время анимации
@@ -36,7 +34,7 @@ function loadPage(url) {
             const content = document.querySelector('.container');
             const parser = new DOMParser();
             const doc = parser.parseFromString(this.responseText, 'text/html');
-            const newContent = doc.querySelector('.container').innerHTML; // Получаем только контент
+            const newContent = doc.querySelector('.container').innerHTML;
 
             // Заменяем старый контент на новый
             content.innerHTML = newContent;
@@ -50,9 +48,9 @@ function loadPage(url) {
 
             // Добавляем анимацию появления
             setTimeout(() => {
-                content.classList.remove('fade'); // Убираем класс fade для нового контента
-                content.classList.add('in'); // Добавляем класс 'in' с небольшой задержкой
-            }, 50); // Добавляем класс 'in' с небольшой задержкой
+                content.classList.remove('fade');
+                content.classList.add('in');
+            }, 50);
         } else {
             console.error('Ошибка загрузки страницы:', this.status);
         }
