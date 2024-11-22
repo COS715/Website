@@ -11,16 +11,39 @@ body {
 }
 
 .logo {
-    width: 100px; /* Установи нужный размер для логотипа */
+    width: 100px; /* Установите нужный размер для логотипа */
 }
 
-.icons img {
+.icons {
+    display: flex;
+    align-items: center; /* Центрирование иконок по вертикали */
+	font-size: 0;
+}
+
+.social-icon {
     width: 30px; /* Размер иконок */
+    height: 30px; /* Высота иконок для сохранения пропорций */
     margin-left: 10px;
+    transition: transform 0.2s; /* Плавный переход при наведении */
 }
 
-nav {
+.social-icon:hover {
+    transform: scale(1.1); /* Увеличение иконки при наведении */
+}
+
+.project-links {
     margin-top: 10px;
+    text-align: left; /* Выравнивание текста влево */
+    margin-left: 20px; /* Отступ слева */
+}
+
+.project-links ul {
+    list-style-type: none; /* Убирает маркеры списка */
+    padding: 0; /* Убирает отступы */
+}
+
+.project-links li {
+    margin: 5px 0; /* Отступы между элементами списка */
 }
 
 nav a {
@@ -58,7 +81,7 @@ h1, h2 {
 }
 
 .image-container img {
-    width: 300px; /* Установи нужный размер для изображений */
+    width: 300px; /* Установите нужный размер для изображений */
 }
 
 .image-container em {
