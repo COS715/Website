@@ -67,7 +67,10 @@ function loadPage(url) {
 
                 // Добавляем анимацию появления
                 content.classList.remove('fade'); // Убираем класс "fade" после замены
-                content.classList.add('in'); // Добавляем класс "in" для появления
+                // Добавляем задержку перед добавлением класса "in"
+                setTimeout(() => {
+                    content.classList.add('in'); // Добавляем класс "in" для появления
+                }, 50); // Задержка перед добавлением класса "in"
             }, 500); // Время должно соответствовать времени анимации в CSS
         } else {
             console.error('Ошибка загрузки страницы:', this.status);
@@ -77,6 +80,5 @@ function loadPage(url) {
     xhr.onerror = function() {
         console.error('Ошибка сети');
     };
-
     xhr.send();
 }
