@@ -4,8 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const content = document.querySelector('.container');
 
     // Проверяем, является ли текущая страница главной
-    const isHomePage = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
-
+    cconst isHomePage = window.location.pathname === '/Website/' || window.location.pathname.endsWith('index.html');
     if (isHomePage) {
         footer.style.display = ''; // Показываем футер
     } else {
