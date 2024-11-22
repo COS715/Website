@@ -4,7 +4,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const content = document.querySelector('.container');
 
     // Проверяем, является ли текущая страница главной
-    if (window.location.pathname.endsWith('index.html')) {
+    const isHomePage = window.location.pathname.endsWith('index.html');
+    console.log('Текущая страница:', window.location.pathname);
+    console.log('Является ли главной страницей:', isHomePage);
+
+    if (isHomePage) {
         footer.style.display = ''; // Показываем футер
     } else {
         footer.style.display = 'none'; // Скрываем футер
@@ -58,7 +62,11 @@ function loadPage(url) {
                 history.pushState(null, '', url);
 
                 // Проверяем, если загруженная страница - это главная
-                if (url.endsWith('index.html')) {
+                const isHomePage = url.endsWith('index.html');
+                console.log('Загруженная страница:', url);
+                console.log('Является ли загруженной главной страницей:', isHomePage);
+
+                if (isHomePage) {
                     footer.style.display = ''; // Показываем футер
                 } else {
                     footer.style.display = 'none'; // Скрываем футер
