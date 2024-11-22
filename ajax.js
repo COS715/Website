@@ -3,8 +3,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const footer = document.getElementById('footer');
     const content = document.querySelector('.container');
 
-    // Скрываем футер по умолчанию
-    footer.style.display = 'none';
+    // Проверяем, является ли текущая страница главной
+    if (window.location.pathname.endsWith('index.html')) {
+        footer.style.display = ''; // Показываем футер
+    } else {
+        footer.style.display = 'none'; // Скрываем футер
+    }
 
     // Применяем анимацию "входа" для первого отображения страницы
     content.classList.add('fade');
