@@ -6,40 +6,37 @@ body {
 }
 
 .header {
+    max-width: 900px; /* Максимальная ширина шапки */
+    margin: 0 auto; /* Центрирование шапки */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Центрируем элементы по вертикали */
     padding: 10px 20px;
-    background-color: transparent; /* или inherit */
 }
 
 .logo {
     width: 100px; /* Установите нужный размер для логотипа */
 }
 
-.navigation {
-    display: flex; /* Расположение навигационных ссылок в строку */
-}
-
-.nav-links {
-    list-style: none; /* Убирает маркеры списка */
-    display: flex; /* Расположение ссылок в строку */
-    margin: 0; /* Убирает отступы */
-    padding: 0; /* Убирает отступы */
-}
-
-.nav-links li {
-    margin-right: 15px; /* Отступ между ссылками */
-}
-
 .icons {
     display: flex;
-    align-items: center; /* Центрируем иконки по вертикали */
+    flex-direction: column; /* Расположение иконок и навигации в столбик */
+    margin-left: auto; /* Сдвигаем блок с иконками вправо */
+    margin-right: 20px; /* Отступ справа */
+    align-items: flex-end; /* Выравнивание по правому краю */
 }
 
-.icons a {
-    text-decoration: none; /* Убирает подчеркивание у ссылок */
-    margin-left: 10px; /* Отступ между иконками */
+.social-icons {
+    display: flex; /* Расположение иконок в строку */
+}
+
+.social-icons a {
+    margin: 0 5px; /* Отступ между иконками */
+    display: inline-block; /* Это необходимо для применения transform */
+    transition: transform 0.3s ease; /* Плавный переход для трансформации */
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Увеличение размера иконки при наведении */
 }
 
 .social-icon {
@@ -47,36 +44,38 @@ body {
     height: 30px; /* Установите нужный размер для иконок */
 }
 
-h1, h2 {
-    text-align: center;
+.navigation {
+    display: flex; /* Расположение навигационных ссылок в строку */
+    margin-top: 10px; /* Отступ сверху для навигации */
+    text-align: center; /* Центрирование навигационных ссылок */
 }
 
-.project-links {
-    margin-top: 10px;
-    text-align: left; /* Выравнивание текста влево */
-    margin-left: 20px; /* Отступ слева */
-}
-
-.project-links ul {
-    list-style-type: none; /* Убирает маркеры списка */
-    padding: 0; /* Убирает отступы */
-}
-
-.project-links li {
-    margin: 5px 0; /* Отступы между элементами списка */
-}
-
-nav a {
+.navigation a {
     color: white; /* Цвет текста для навигационных ссылок */
     text-decoration: none; /* Убирает подчеркивание у ссылок */
+    margin: 0 0px; /* Отступ между ссылками */
+    padding: 5px; /* Для эффекта фона */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход при наведении */
+}
+
+.navigation a:hover {
+    background-color: blue; /* Фон при наведении */
+    color: white; /* Цвет текста при наведении */
+    border: none; /* Убираем любые границы */
 }
 
 h1, h2 {
     text-align: center;
+}
+
+.container {
+    max-width: 900px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование контейнера */
+    padding: 20px; /* Отступы внутри контейнера */
 }
 
 .image-container {
-    text-align: center;
+    text-align: center; /* Центрирование изображений */
     margin: 20px 0;
 }
 
