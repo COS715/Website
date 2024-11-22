@@ -7,9 +7,9 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Center items vertically */
+    align-items: center; /* Центрирует элементы по вертикали */
     padding: 20px;
-    position: relative; /* Allow absolute positioning of icons */
+    position: relative; /* Позволяет использовать абсолютное позиционирование для иконок */
 }
 
 .logo {
@@ -18,11 +18,12 @@ body {
 
 .icons {
     display: flex;
-    align-items: center; /* Центрирование иконок по вертикали */
+    align-items: center; /* Центрирует иконки по вертикали */
     font-size: 0; /* Убирает пробелы между элементами */
     position: absolute; /* Позиционирование иконок */
     right: 20px; /* Отступ от правого края */
     top: 20px; /* Отступ от верхнего края */
+    z-index: 10; /* Убедитесь, что иконки находятся выше других элементов */
 }
 
 .icons a {
@@ -41,6 +42,7 @@ body {
     transform: scale(1.1); /* Увеличение иконки при наведении */
 }
 
+/* Остальные стили остаются без изменений */
 .project-links {
     margin-top: 10px;
     text-align: left; /* Выравнивание текста влево */
