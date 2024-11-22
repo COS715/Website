@@ -17,12 +17,18 @@ body {
 .icons {
     display: flex;
     align-items: center; /* Центрирование иконок по вертикали */
-	font-size: 0;
+    font-size: 0; /* Убирает пробелы между элементами */
 }
+
+.icons a {
+    text-decoration: none; /* Убирает подчеркивание у ссылок */
+    margin: 0; /* Убирает отступы между ссылками */
+}
+
 .social-icon {
     width: 30px; /* Размер иконок */
     height: 30px; /* Высота иконок для сохранения пропорций */
-    margin-left: 10px;
+    margin-left: 10px; /* Отступ между иконками */
     transition: transform 0.2s; /* Плавный переход при наведении */
 }
 
