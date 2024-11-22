@@ -48,8 +48,8 @@ function loadPage(url) {
 
             // Добавляем анимацию появления
             setTimeout(() => {
-                content.classList.remove('fade');
-                content.classList.add('in');
+                content.classList.remove('fade'); // Убираем класс fade
+                content.classList.add('in'); // Добавляем класс 'in' с небольшой задержкой
             }, 50);
         } else {
             console.error('Ошибка загрузки страницы:', this.status);
