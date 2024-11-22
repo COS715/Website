@@ -69,8 +69,9 @@ function loadPage(url) {
                 content.classList.remove('fade'); // Убираем класс "fade" после замены
                 // Добавляем задержку перед добавлением класса "in"
                 setTimeout(() => {
-                    content.classList.add('in'); // Добавляем класс "in" для появления
-                }, 50); // Задержка перед добавлением класса "in"
+					content.classList.remove('in');
+					content.classList.add('fade');
+				}, 50); // Задержка перед началом исчезновения); // Задержка перед добавлением класса "in"
             }, 500); // Время должно соответствовать времени анимации в CSS
         } else {
             console.error('Ошибка загрузки страницы:', this.status);
