@@ -148,11 +148,13 @@ h1, h2 {
 }
 .fade {
     opacity: 0;
-    transition: opacity 0.5s ease; /* Плавный переход для opacity */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Плавный переход */
+    transform: translateY(10px); /* Сдвиг вниз при исчезновении */
 }
 
 .in {
     opacity: 1;
+    transform: translateY(0); /* Возвращаем в исходное положение при появлении */
 }
 
 .caption {
