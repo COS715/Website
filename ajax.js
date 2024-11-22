@@ -66,12 +66,10 @@ function loadPage(url) {
                 }
 
                 // Добавляем анимацию появления
-                content.classList.remove('fade'); // Убираем класс "fade" после замены
-                // Добавляем задержку перед добавлением класса "in"
+                content.classList.remove('fade'); // Убираем класс "fade"
                 setTimeout(() => {
-					content.classList.remove('in');
-					content.classList.add('fade');
-				}, 50); // Задержка перед началом исчезновения); // Задержка перед добавлением класса "in"
+                    content.classList.add('in'); // Добавляем класс "in" для плавного появления
+                }, 50); // Задержка перед добавлением класса "in"
             }, 500); // Время должно соответствовать времени анимации в CSS
         } else {
             console.error('Ошибка загрузки страницы:', this.status);
