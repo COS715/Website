@@ -17,6 +17,21 @@ body {
     width: 100px; /* Установите нужный размер для логотипа */
 }
 
+.navigation {
+    display: flex; /* Расположение навигационных ссылок в строку */
+}
+
+.nav-links {
+    list-style: none; /* Убирает маркеры списка */
+    display: flex; /* Расположение ссылок в строку */
+    margin: 0; /* Убирает отступы */
+    padding: 0; /* Убирает отступы */
+}
+
+.nav-links li {
+    margin-right: 15px; /* Отступ между ссылками */
+}
+
 .icons {
     display: flex;
     align-items: center; /* Центрируем иконки по вертикали */
@@ -30,6 +45,10 @@ body {
 .social-icon {
     width: 30px; /* Установите нужный размер для иконок */
     height: 30px; /* Установите нужный размер для иконок */
+}
+
+h1, h2 {
+    text-align: center;
 }
 
 .project-links {
@@ -48,9 +67,8 @@ body {
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin-right: 15px;
+    color: white; /* Цвет текста для навигационных ссылок */
+    text-decoration: none; /* Убирает подчеркивание у ссылок */
 }
 
 h1, h2 {
