@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const content = document.querySelector('.container');
 
     // Проверяем, является ли текущая страница главной
-    cconst isHomePage = window.location.pathname === '/Website/' || window.location.pathname.endsWith('index.html');
+    const isHomePage = window.location.pathname === '/Website/' || window.location.pathname.endsWith('index.html');
+
     if (isHomePage) {
         footer.style.display = ''; // Показываем футер
     } else {
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
             content.classList.add('fade');
             
             // Ждем завершения анимации исчезновения перед загрузкой новой страницы
-            setTimeout(() => loadPage(targetUrl), 800); // Увеличено время до 800 мс
+            setTimeout(() => loadPage(targetUrl), 500); // Время должно соответствовать времени анимации в CSS
         });
     });
 
