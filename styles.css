@@ -6,68 +6,67 @@ body {
 }
 
 .header {
-    max-width: 850px; /* Максимальная ширина шапки */
-    margin: 0 auto; /* Центрирование шапки */
+    max-width: 850px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Распределяем элементы по горизонтали */
-    align-items: flex-end; /* Выравнивание элементов по нижнему краю */
+    justify-content: space-between;
+    align-items: flex-end;
     padding: 10px 20px;
 }
 
 .logo-container {
-    flex: 0 0 auto; /* Логотип не будет растягиваться */
-    margin-right: auto; /* Push the logo to the left side */
+    flex: 0 0 auto;
+    margin-right: auto;
 }
 
 .logo {
-    width: 150px; /* Установите нужный размер для логотипа (уменьшено) */
+    width: 150px;
 }
 
 .icons {
     display: flex;
-    flex-direction: column; /* Расположение иконок и навигации в столбик */
-    align-items: flex-end; /* Выравнивание иконок и навигации вправо */
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .social-icons {
-    display: flex; /* Расположение иконок в строку */
-    margin-bottom: 3px; /* Отступ между иконками и навигацией */
+    display: flex;
+    margin-bottom: 3px;
 }
 
 .social-icon {
-    width: 25px; /* Установите нужный размер для иконок (уменьшено) */
-    height: 25px; /* Установите нужный размер для иконок (уменьшено) */
-    margin: 0 5px; /* Отступ между иконками */
-    transition: transform 0.3s ease; /* Плавный переход для увеличения */
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    transition: transform 0.3s ease;
 }
 
 .social-icon:hover {
-    transform: scale(1.2); /* Увеличение размера иконки при наведении */
+    transform: scale(1.2);
 }
 
 .navigation {
-    display: flex; /* Расположение навигационных ссылок в строку */
-    justify-content: flex-end; /* Выравнивание ссылок вправо */
-    margin-top: 30px; /* Отступ между иконками и навигацией */
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
 }
 
 .navigation a {
-    color: white; /* Цвет текста для навигационных ссылок */
-    text-decoration: none; /* Убирает подчеркивание у ссылок */
-    margin: 0 0px; /* Отступ между ссылками */
-    padding: 5px; /* Для эффекта фона */
-    transition: background-color 0.5s ease, color 0.5s ease; /* Увеличено время перехода */
-    letter-spacing: 2px; /* Увеличение расстояния между буквами */
+    color: white;
+    text-decoration: none;
+    margin: 0 0px;
+    padding: 5px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    letter-spacing: 2px;
 }
 
 .navigation a:hover {
-    background-color: blue; /* Фон при наведении */
-    color: white; /* Цвет текста при наведении */
-    box-shadow: none; /* Убираем свечение */
+    background-color: blue;
+    color: white;
 }
 
 .thin-heading {
-    font-weight: 100; /* Используйте значение 100, 200, 300 и т.д. для более тонкого шрифта */
+    font-weight: 100;
 }
 
 h1, h2 {
@@ -75,86 +74,12 @@ h1, h2 {
 }
 
 .container {
-    max-width: 650px; /* Максимальная ширина контейнера */
-    margin: 0 auto; /* Центрирование контейнера */
-    padding: 20px; /* Отступы внутри контейнера */
-	opacity: 1;
-}
-
-.content {
-    display: flex; /* Используем Flexbox для размещения текста и изображения */
-    align-items: flex-start; /* Выравнивание элементов по верхнему краю */
-    justify-content: space-between; /* Распределяем пространство между элементами */
-}
-
-.text-container {
-    flex: 1; /* Позволяет текстовому контейнеру занимать доступное пространство */
-    margin-right: 20px; /* Отступ между текстом и изображением */
-}
-
-.image-container {
-    flex-shrink: 0; /* Не позволяет изображению уменьшаться */
-}
-
-.image-container img {
-    width: 300px; /* Установите нужный размер для изображений */
-}
-
-.footer {
-    max-width: 650px; /* Максимальная ширина для футера */
-    margin: 20px auto; /* Центрирование футера */
-    padding: 10px; /* Отступы внутри футера */
-    border-radius: 0px; /* Скругление углов */
-}
-
-.footer h2 {
-    text-align: center; /* Выравнивание заголовка по центру */
-	margin-bottom: 5px; /* Уменьшите отступ снизу */
-}
-
-.form-group {
-    margin-bottom: 5px; /* Отступ между группами */
-}
-
-.footer label {
-    display: block; /* Отображение метки как блочного элемента */
-    margin-bottom: 5px; /* Отступ снизу для метки */
-}
-
-.footer input, .footer textarea {
-    width: 90%; /* Ширина полей ввода */
-    padding: 10px; /* Отступы внутри полей */
-    border: 1px solid #ccc; /* Граница */
-    border-radius: 4px; /* Скругление углов */
-    background-color: #fff; /* Фон полей */
-}
-
-.button-group {
-    margin-top: 10px; /* Отступ сверху для кнопки */
-}
-
-.footer button {
-    background-color: blue; /* Цвет кнопки */
-    color: white; /* Цвет текста кнопки */
-    padding: 10px 15px; /* Отступы внутри кнопки */
-    border: none; /* Без границы */
-    border-radius: 4px; /* Скругление углов */
-    cursor: pointer; /* Указатель при наведении */
-}
-
-.footer button:hover {
-    background-color: darkblue; /* Цвет кнопки при наведении */
-}
-.fade {
-    opacity: 0;
-    transition: opacity 0.5s ease; /* Плавный переход для opacity */
-}
-
-.in {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 20px;
     opacity: 1;
 }
 
-}
 .drawings-gallery {
     display: flex; /* Используем Flexbox для размещения изображений */
     flex-wrap: wrap; /* Позволяем элементам переноситься на новую строку */
@@ -162,20 +87,15 @@ h1, h2 {
 }
 
 .drawing-item {
-    margin: 10px; /* Отступ между элементами */
+    width: calc(50% - 10px); /* Каждое изображение занимает 50% ширины контейнера минус отступ */
+    margin-bottom: 20px; /* Отступ снизу для каждого элемента */
     text-align: center; /* Выравнивание текста под изображениями */
 }
 
-
-/* Устанавливаем ширину для первых двух изображений */
-.drawing-item:nth-child(1),
-.drawing-item:nth-child(2) {
-    flex: 0 0 48%; /* Каждое занимает 48% ширины контейнера */
-}
-/* Устанавливаем ширину для третьего изображения */
 .drawing-item:nth-child(3) {
-    flex: 0 0 100%; /* Занимает полную ширину контейнера */
+    width: 100%; /* Третье изображение занимает полную ширину контейнера */
 }
+
 .caption {
-    color: white; /* Caption color */
+    color: white; /* Цвет подписи */
 }
