@@ -2,14 +2,15 @@ body {
     background-color: black;
     color: white;
     font-family: Arial, sans-serif;
+    margin: 0; /* Убираем отступы по умолчанию */
 }
 
 .header {
     display: flex;
-    justify-content: space-between;
-    align-items: center; /* Центрирует элементы по вертикали */
-    padding: 20px;
-    position: relative; /* Позволяет использовать абсолютное позиционирование для иконок */
+    justify-content: space-between; /* Равномерное распределение пространства */
+    align-items: center; /* Центрируем элементы по вертикали */
+    padding: 10px 20px; /* Отступы внутри шапки */
+    background-color: #333; /* Фон шапки */
 }
 
 .logo {
@@ -18,23 +19,17 @@ body {
 
 .icons {
     display: flex;
-    align-items: center; /* Центрирует иконки по вертикали */
-    font-size: 0; /* Убирает пробелы между элементами */
-    position: absolute; /* Позиционирование иконок */
-    right: 20px; /* Отступ от правого края */
-    top: 20px; /* Отступ от верхнего края */
-    z-index: 10; /* Убедитесь, что иконки находятся выше других элементов */
+    align-items: center; /* Центрируем иконки по вертикали */
 }
 
 .icons a {
     text-decoration: none; /* Убирает подчеркивание у ссылок */
-    margin: 0; /* Убирает отступы между ссылками */
+    margin-left: 10px; /* Отступ между иконками */
 }
 
 .social-icon {
     width: 30px; /* Установите нужный размер для иконок */
     height: 30px; /* Установите нужный размер для иконок */
-    margin-left: 10px; /* Отступ между иконками */
     transition: transform 0.2s; /* Плавный переход при наведении */
 }
 
@@ -42,7 +37,6 @@ body {
     transform: scale(1.1); /* Увеличение иконки при наведении */
 }
 
-/* Остальные стили остаются без изменений */
 .project-links {
     margin-top: 10px;
     text-align: left; /* Выравнивание текста влево */
@@ -62,25 +56,6 @@ nav a {
     color: white;
     text-decoration: none;
     margin-right: 15px;
-    position: relative; /* Для позиционирования псевдоэлемента */
-    padding: 5px 10px; /* Добавим немного отступов */
-}
-
-nav a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    background-color: blue; /* Цвет фона при наведении */
-    opacity: 0; /* Начальная прозрачность */
-    transition: opacity 0.3s; /* Плавный переход */
-    z-index: -1; /* Помещаем под текст */
-}
-
-nav a:hover::after {
-    opacity: 1; /* Полная видимость при наведении */
 }
 
 h1, h2 {
