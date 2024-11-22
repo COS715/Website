@@ -1,0 +1,67 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo {
+    width: 100px; /* Установи нужный размер для логотипа */
+}
+
+.icons img {
+    width: 30px; /* Размер иконок */
+    margin-left: 10px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    position: relative; /* Для позиционирования псевдоэлемента */
+    padding: 5px 10px; /* Добавим немного отступов */
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background-color: blue; /* Цвет фона при наведении */
+    opacity: 0; /* Начальная прозрачность */
+    transition: opacity 0.3s; /* Плавный переход */
+    z-index: -1; /* Помещаем под текст */
+}
+
+nav a:hover::after {
+    opacity: 1; /* Полная видимость при наведении */
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-container img {
+    width: 300px; /* Установи нужный размер для изображений */
+}
+
+.image-container em {
+    display: block;
+    margin-top: 5px;
+}
