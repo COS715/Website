@@ -5,12 +5,13 @@ document.addEventListener("DOMContentLoaded", function() {
         link.addEventListener('click', function(event) {
             event.preventDefault(); // Предотвращаем стандартное поведение ссылки
             const targetUrl = this.href; // Получаем URL страницы
-            console.log(`Загружаем страницу: ${targetUrl}`); // Отладочное сообщение
             
             // Добавляем анимацию исчезновения
             const content = document.querySelector('.container');
-            content.classList.remove('in');
-            setTimeout(() => loadPage(targetUrl), 500); // Задержка для анимации
+            content.classList.remove('in'); // Убираем класс 'in' для начала анимации исчезновения
+            
+            // Ждем завершения анимации исчезновения перед загрузкой новой страницы
+            setTimeout(() => loadPage(targetUrl), 500); // 500 мс - время анимации
         });
     });
 });
@@ -29,15 +30,14 @@ function loadPage(url) {
             content.innerHTML = newContent;
 
             // Добавляем анимацию появления
-            content.classList.add('in');
-            console.log('Контент загружен и заменен.'); // Отладочное сообщение
+            setTimeout(() => content.classList.add('in'), 50); // Добавляем класс 'in' с небольшой задержкой
         } else {
-            console.error('Ошибка загрузки страницы:', this.status); // Логируем ошибку
+            console.error('Ошибка загрузки страницы:', this.status);
         }
     };
 
     xhr.onerror = function() {
-        console.error('Ошибка сети'); // Логируем сетевую ошибку
+        console.error('Ошибка сети');
     };
 
     xhr.send();
