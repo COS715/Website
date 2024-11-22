@@ -67,7 +67,7 @@ function loadPage(url) {
                 // Добавляем анимацию появления
                 content.classList.remove('fade'); // Убираем класс "fade" после замены
                 content.classList.add('in'); // Добавляем класс "in" для появления
-            }, 800); // Увеличено время до 800 мс
+            }, 500); // Время должно соответствовать времени анимации в CSS
         } else {
             console.error('Ошибка загрузки страницы:', this.status);
         }
