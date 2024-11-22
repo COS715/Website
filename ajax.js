@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Проверяем, является ли текущая страница главной
     const isHomePage = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
 
-    // Убедимся, что футер отображается на главной странице
     if (isHomePage) {
         footer.style.display = ''; // Показываем футер
     } else {
