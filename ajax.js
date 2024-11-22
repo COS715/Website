@@ -24,6 +24,11 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout(() => loadPage(targetUrl), 500); // 500 мс - время анимации
         });
     });
+
+    // Обработчик события popstate для навигации по истории
+    window.addEventListener('popstate', function(event) {
+        loadPage(location.pathname); // Загружаем страницу по текущему URL
+    });
 });
 
 function loadPage(url) {
@@ -39,6 +44,9 @@ function loadPage(url) {
             // Заменяем старый контент на новый
             content.innerHTML = newContent;
 
+            // Обновляем URL в адресной строке
+            history.pushState(null, '', url);
+
             // Проверяем, если загруженная страница - это главная
             if (url.endsWith('index.html')) {
                 footer.style.display = ''; // Показываем футер
@@ -48,8 +56,8 @@ function loadPage(url) {
 
             // Добавляем анимацию появления
             setTimeout(() => {
-                content.classList.remove('fade'); // Убираем класс fade
-                content.classList.add('in'); // Добавляем класс 'in' с небольшой задержкой
+                content.classList.remove('fade');
+                content.classList.add('in');
             }, 50);
         } else {
             console.error('Ошибка загрузки страницы:', this.status);
