@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Проверяем, является ли текущая страница главной
     const isHomePage = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
 
+    // Убедимся, что футер отображается на главной странице
     if (isHomePage) {
         footer.style.display = ''; // Показываем футер
     } else {
@@ -28,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
             content.classList.add('fade');
             
             // Ждем завершения анимации исчезновения перед загрузкой новой страницы
-            setTimeout(() => loadPage(targetUrl), 500); // 500 мс - время анимации
+            setTimeout(() => loadPage(targetUrl), 800); // Увеличено время до 800 мс
         });
     });
 
@@ -68,7 +69,7 @@ function loadPage(url) {
                 // Добавляем анимацию появления
                 content.classList.remove('fade'); // Убираем класс "fade" после замены
                 content.classList.add('in'); // Добавляем класс "in" для появления
-            }, 500); // 500 мс - время анимации исчезновения
+            }, 800); // Увеличено время до 800 мс
         } else {
             console.error('Ошибка загрузки страницы:', this.status);
         }
