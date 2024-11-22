@@ -6,7 +6,11 @@ document.addEventListener("DOMContentLoaded", function() {
             event.preventDefault(); // Предотвращаем стандартное поведение ссылки
             const targetUrl = this.href; // Получаем URL страницы
             console.log(`Загружаем страницу: ${targetUrl}`); // Отладочное сообщение
-            loadPage(targetUrl); // Загружаем новый контент
+            
+            // Добавляем анимацию исчезновения
+            const content = document.querySelector('.container');
+            content.classList.remove('in');
+            setTimeout(() => loadPage(targetUrl), 500); // Задержка для анимации
         });
     });
 });
@@ -23,6 +27,9 @@ function loadPage(url) {
 
             // Заменяем старый контент на новый
             content.innerHTML = newContent;
+
+            // Добавляем анимацию появления
+            content.classList.add('in');
             console.log('Контент загружен и заменен.'); // Отладочное сообщение
         } else {
             console.error('Ошибка загрузки страницы:', this.status); // Логируем ошибку
