@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
         footer.style.display = 'none'; // Скрываем футер
     }
-});
 
     // Применяем анимацию "входа" для первого отображения страницы
     content.classList.add('fade');
@@ -24,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
             event.preventDefault(); // Предотвращаем стандартное поведение ссылки
             const targetUrl = this.href; // Получаем URL страницы
             
-            // Добавляем анимацию исчезновения
+            // Добавляем анимацию "исчезновения"
             content.classList.remove('in');
             content.classList.add('fade');
             
@@ -57,13 +56,8 @@ function loadPage(url) {
             setTimeout(() => {
                 content.innerHTML = newContent; // Заменяем контент
 
-                // Обновляем URL в адресной строке
-                history.pushState(null, '', url);
-
                 // Проверяем, если загруженная страница - это главная
-                const isHomePage = url.endsWith('index.html');
-                console.log('Загруженная страница:', url);
-                console.log('Является ли загруженной главной страницей:', isHomePage);
+                const isHomePage = url === '/' || url.endsWith('index.html');
 
                 if (isHomePage) {
                     footer.style.display = ''; // Показываем футер
