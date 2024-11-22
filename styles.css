@@ -78,6 +78,8 @@ h1, h2 {
     max-width: 650px; /* Максимальная ширина контейнера */
     margin: 0 auto; /* Центрирование контейнера */
     padding: 20px; /* Отступы внутри контейнера */
+	opacity: 1;
+    transition: opacity 0.5s ease-in-out; /* Плавный переход для opacity */
 }
 
 .content {
@@ -145,12 +147,11 @@ h1, h2 {
     background-color: darkblue; /* Цвет кнопки при наведении */
 }
 .fade {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out; /* Убедитесь, что это время соответствует вашему JavaScript */
+    opacity: 0; /* Скрываем элемент */
 }
 
-.fade.in {
-    opacity: 1;
+.in {
+    opacity: 1; /* Показываем элемент */
 }
 
 }
