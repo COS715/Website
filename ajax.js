@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     const links = document.querySelectorAll('.navigation a');
+    const footer = document.getElementById('footer');
+
+    // Скрываем футер по умолчанию
+    footer.style.display = 'none';
 
     links.forEach(link => {
         link.addEventListener('click', function(event) {
@@ -30,7 +34,6 @@ function loadPage(url) {
             content.innerHTML = newContent;
 
             // Проверяем, если загруженная страница - это главная
-            const footer = document.getElementById('footer');
             if (url.endsWith('index.html')) {
                 footer.style.display = ''; // Показываем футер
             } else {
@@ -50,4 +53,3 @@ function loadPage(url) {
 
     xhr.send();
 }
-
