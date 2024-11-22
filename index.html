@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="eu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Вебсайт COS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <title>COS's Website</title>
 </head>
 <body>
     <header class="header">
-        <img src="images/logo.png" alt="Логотип" class="logo"> <!-- Логотип слева -->
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Логотип" class="logo"> <!-- Логотип слева -->
+        </div>
         <div class="icons">
             <div class="social-icons">
                 <a href="https://t.me/cos_715" target="_blank">
@@ -17,23 +20,46 @@
                 <a href="https://vk.com/id623495939" target="_blank">
                     <img src="images/vk.png" alt="VK" class="social-icon">
                 </a>
-				<a href="https://github.com/COS715" target="_blank">
+                <a href="https://github.com/COS715" target="_blank">
                     <img src="images/github.png" alt="GitHub" class="social-icon">
                 </a>
             </div>
-            <nav class="navigation">
-                <a href="drawings.html">Рисунки</a>
-                <a href="projects.html">Проекты</a>
-            </nav>
+            <div class="navigation">
+				<a href="index.html">ABOUT</a>
+                <a href="drawings.html">DRAWINGS</a>
+                <a href="projects.html">CODING</a>
+            </div>
         </div>
     </header>
 
     <div class="container">
-        <h2>Информация обо мне</h2>
-        <p>Здесь будет текст </p>
-        <div class="image-container">
-            <img src="images/photo.jpg" alt=" фото">
+        <h1 class="thin-heading">WELCOME TO COS's WEBSITE!</h1>
+        <div class="content">
+            <div class="text-container">
+                <h2 class="thin-heading">Who am I?</h2> 
+                <p>My name is Lesya, you may also know me as COS or Paleo Nerd. On this website, you'll be able to find my works: drawings, simple programs, and even animations in the future!</p>
+                <p>I am a college student, studying to be a programmer. Sometimes it's hard, sometimes it's boring, but I try to get better at programming every day (actually, every week :D). I love dinosaurs, coding, good food, science fiction books about space, and Formula 1.</p>
+            </div>
+            <div class="image-container">
+                <img src="images/me.jpg" alt="фото">
+            </div>
         </div>
     </div>
+	<footer class="footer">
+		<h2 class="thin-heading">You can email me right here!</h2>
+		<form action="mailto:coolcatinhat0@gmail.com" method="post" enctype="text/plain">
+			<div class="form-group">
+				<label for="email">Your email:</label>
+				<input type="email" id="email" name="email" required>
+			</div>
+			<div class="form-group">
+				<label for="message">Message:</label>
+				<textarea id="message" name="message" required></textarea>
+			</div>
+			<div class="button-group">
+				<button type="submit">Send</button>
+			</div>
+		</form>
+	</footer>
 </body>
 </html>
