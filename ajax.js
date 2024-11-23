@@ -65,11 +65,13 @@ function loadPage(url) {
                     footer.style.display = 'none'; // Скрываем футер
                 }
 
-                // Добавляем анимацию появления
-                content.classList.remove('fade'); // Убираем класс "fade"
-                setTimeout(() => {
-                    content.classList.add('in'); // Добавляем класс "in" для плавного появления
-                }, 50); // Задержка перед добавлением класса "in"
+                // Используем requestAnimationFrame для плавного добавления класса "in"
+                requestAnimationFrame(() => {
+                    content.classList.remove('fade'); // Убираем класс "fade"
+                    requestAnimationFrame(() => {
+                        content.classList.add('in'); // Добавляем класс "in" для плавного появления
+                    });
+                });
             }, 500); // Время должно соответствовать времени анимации в CSS
         } else {
             console.error('Ошибка загрузки страницы:', this.status);
