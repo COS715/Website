@@ -148,12 +148,15 @@ h1, h2 {
 }
 .fade {
     opacity: 0;
-    transition: opacity 0.5s ease-in-out; /* Плавный переход */
+    transform: scale(0.95); /* Уменьшаем размер */
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out; /* Плавный переход для обоих свойств */
 }
 
 .in {
     opacity: 1;
+    transform: scale(1); /* Возвращаем размер к нормальному */
 }
+
 .drawings-gallery {
     display: flex;
     flex-wrap: wrap;

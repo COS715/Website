@@ -68,9 +68,11 @@ function loadPage(url) {
                 // Используем requestAnimationFrame для плавного добавления класса "in"
                 requestAnimationFrame(() => {
                     content.classList.remove('fade'); // Убираем класс "fade"
-                    requestAnimationFrame(() => {
+                    
+                    // Добавляем небольшую задержку перед добавлением класса "in"
+                    setTimeout(() => {
                         content.classList.add('in'); // Добавляем класс "in" для плавного появления
-                    });
+                    }, 50); // Задержка может быть настроена по вашему усмотрению
                 });
             }, 500); // Время должно соответствовать времени анимации в CSS
         } else {
@@ -83,3 +85,4 @@ function loadPage(url) {
     };
     xhr.send();
 }
+
