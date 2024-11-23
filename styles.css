@@ -161,8 +161,10 @@ h1, h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-end; /* Выравнивание по нижнему краю */
     margin: 20px; /* Отступ вокруг галереи */
 }
+
 
 .drawing-item {
     flex: 1 1 45%; /* Каждое изображение занимает до 45% ширины */
