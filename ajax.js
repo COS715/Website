@@ -3,16 +3,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const footer = document.getElementById('footer');
     const content = document.querySelector('.container');
 
-    // Проверяем, является ли текущая страница главной
     const isHomePage = window.location.pathname === '/Website/' || window.location.pathname.endsWith('index.html');
 
     if (isHomePage) {
-        footer.style.display = ''; // Показываем футер
+        footer.style.display = ''; 
     } else {
-        footer.style.display = 'none'; // Скрываем футер
+        footer.style.display = 'none'; 
     }
 
-    // Применяем анимацию "входа" для первого отображения страницы
     content.classList.add('fade');
     setTimeout(() => {
         content.classList.add('in');
@@ -20,21 +18,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     links.forEach(link => {
         link.addEventListener('click', function(event) {
-            event.preventDefault(); // Предотвращаем стандартное поведение ссылки
-            const targetUrl = this.href; // Получаем URL страницы
-            
-            // Добавляем анимацию "исчезновения"
+            event.preventDefault(); 
+            const targetUrl = this.href; 
+
             content.classList.remove('in');
             content.classList.add('fade');
-            
-            // Ждем завершения анимации исчезновения перед загрузкой новой страницы
-            setTimeout(() => loadPage(targetUrl), 500); // Время должно соответствовать времени анимации в CSS
+
+            setTimeout(() => loadPage(targetUrl), 500); 
         });
     });
 
-    // Обработчик события popstate для навигации по истории
     window.addEventListener('popstate', function(event) {
-        loadPage(location.pathname); // Загружаем страницу по текущему URL
+        loadPage(location.pathname); 
     });
 });
 
@@ -48,33 +43,28 @@ function loadPage(url) {
             const doc = parser.parseFromString(this.responseText, 'text/html');
             const newContent = doc.querySelector('.container').innerHTML;
 
-            // Убираем класс "in" для начала анимации
             content.classList.remove('in');
-            content.classList.add('fade'); // Добавляем класс "fade"
+            content.classList.add('fade'); 
 
-            // Ждем завершения анимации перед заменой контента
             setTimeout(() => {
-                content.innerHTML = newContent; // Заменяем контент
+                content.innerHTML = newContent; 
 
-                // Проверяем, если загруженная страница - это главная
                 const isHomePage = url === '/' || url.endsWith('index.html');
 
                 if (isHomePage) {
-                    footer.style.display = ''; // Показываем футер
+                    footer.style.display = ''; 
                 } else {
-                    footer.style.display = 'none'; // Скрываем футер
+                    footer.style.display = 'none'; 
                 }
 
-                // Используем requestAnimationFrame для плавного добавления класса "in"
                 requestAnimationFrame(() => {
-                    content.classList.remove('fade'); // Убираем класс "fade"
+                    content.classList.remove('fade'); 
                     
-                    // Добавляем небольшую задержку перед добавлением класса "in"
                     setTimeout(() => {
-                        content.classList.add('in'); // Добавляем класс "in" для плавного появления
-                    }, 50); // Задержка может быть настроена по вашему усмотрению
+                        content.classList.add('in'); 
+                    }, 50); 
                 });
-            }, 500); // Время должно соответствовать времени анимации в CSS
+            }, 500); 
         } else {
             console.error('Ошибка загрузки страницы:', this.status);
         }

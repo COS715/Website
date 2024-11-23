@@ -6,68 +6,68 @@ body {
 }
 
 .header {
-    max-width: 850px; /* Максимальная ширина шапки */
-    margin: 0 auto; /* Центрирование шапки */
+    max-width: 850px; 
+    margin: 0 auto; 
     display: flex;
-    justify-content: space-between; /* Распределяем элементы по горизонтали */
-    align-items: flex-end; /* Выравнивание элементов по нижнему краю */
+    justify-content: space-between; 
+    align-items: flex-end; 
     padding: 10px 20px;
 }
 
 .logo-container {
-    flex: 0 0 auto; /* Логотип не будет растягиваться */
-    margin-right: auto; /* Push the logo to the left side */
+    flex: 0 0 auto; 
+    margin-right: auto; 
 }
 
 .logo {
-    width: 150px; /* Установите нужный размер для логотипа (уменьшено) */
+    width: 150px; 
 }
 
 .icons {
     display: flex;
-    flex-direction: column; /* Расположение иконок и навигации в столбик */
-    align-items: flex-end; /* Выравнивание иконок и навигации вправо */
+    flex-direction: column; 
+    align-items: flex-end; 
 }
 
 .social-icons {
-    display: flex; /* Расположение иконок в строку */
-    margin-bottom: 3px; /* Отступ между иконками и навигацией */
+    display: flex; 
+    margin-bottom: 3px; 
 }
 
 .social-icon {
-    width: 25px; /* Установите нужный размер для иконок (уменьшено) */
-    height: 25px; /* Установите нужный размер для иконок (уменьшено) */
-    margin: 0 5px; /* Отступ между иконками */
-    transition: transform 0.3s ease; /* Плавный переход для увеличения */
+    width: 25px; 
+    height: 25px; 
+    margin: 0 5px; 
+    transition: transform 0.3s ease; 
 }
 
 .social-icon:hover {
-    transform: scale(1.2); /* Увеличение размера иконки при наведении */
+    transform: scale(1.2); 
 }
 
 .navigation {
-    display: flex; /* Расположение навигационных ссылок в строку */
-    justify-content: flex-end; /* Выравнивание ссылок вправо */
-    margin-top: 30px; /* Отступ между иконками и навигацией */
+    display: flex; 
+    justify-content: flex-end; 
+    margin-top: 30px; 
 }
 
 .navigation a {
-    color: white; /* Цвет текста для навигационных ссылок */
-    text-decoration: none; /* Убирает подчеркивание у ссылок */
-    margin: 0 0px; /* Отступ между ссылками */
-    padding: 5px; /* Для эффекта фона */
-    transition: background-color 0.5s ease, color 0.5s ease; /* Увеличено время перехода */
-    letter-spacing: 2px; /* Увеличение расстояния между буквами */
+    color: white; 
+    text-decoration: none; 
+    margin: 0 0px; 
+    padding: 5px; 
+    transition: background-color 0.5s ease, color 0.5s ease; 
+    letter-spacing: 2px; 
 }
 
 .navigation a:hover {
-    background-color: blue; /* Фон при наведении */
-    color: white; /* Цвет текста при наведении */
-    box-shadow: none; /* Убираем свечение */
+    background-color: blue;
+    color: white; 
+    box-shadow: none; 
 }
 
 .thin-heading {
-    font-weight: 100; /* Используйте значение 100, 200, 300 и т.д. для более тонкого шрифта */
+    font-weight: 100; 
 }
 
 h1, h2 {
@@ -75,76 +75,76 @@ h1, h2 {
 }
 
 .container {
-    max-width: 750px; /* Максимальная ширина контейнера */
-    margin: 0 auto; /* Центрирование контейнера */
-    padding: 20px; /* Отступы внутри контейнера */
+    max-width: 750px; 
+    margin: 0 auto; 
+    padding: 20px;
 	opacity: 1;
 }
 
 .content {
-    display: flex; /* Используем Flexbox для размещения текста и изображения */
-    align-items: flex-start; /* Выравнивание элементов по верхнему краю */
-    justify-content: space-between; /* Распределяем пространство между элементами */
+    display: flex; 
+    align-items: flex-start; 
+    justify-content: space-between; 
 }
 
 .text-container {
-    flex: 1; /* Позволяет текстовому контейнеру занимать доступное пространство */
-    margin-right: 20px; /* Отступ между текстом и изображением */
+    flex: 1; 
+    margin-right: 20px; 
 }
 
 
 .image-container {
-    flex-shrink: 0; /* Не позволяет изображению уменьшаться */
+    flex-shrink: 0; 
 }
 
 .image-container img {
-    width: 300px; /* Установите нужный размер для изображений */
+    width: 300px; 
 }
 
 .footer {
-    max-width: 650px; /* Максимальная ширина для футера */
-    margin: 20px auto; /* Центрирование футера */
-    padding: 10px; /* Отступы внутри футера */
-    border-radius: 0px; /* Скругление углов */
+    max-width: 650px; 
+    margin: 20px auto;
+    padding: 10px; 
+    border-radius: 0px; 
 }
 
 .footer h2 {
-    text-align: center; /* Выравнивание заголовка по центру */
-	margin-bottom: 5px; /* Уменьшите отступ снизу */
+    text-align: center; 
+	margin-bottom: 5px; 
 }
 
 .form-group {
-    margin-bottom: 5px; /* Отступ между группами */
+    margin-bottom: 5px; 
 }
 
 .footer label {
-    display: block; /* Отображение метки как блочного элемента */
-    margin-bottom: 5px; /* Отступ снизу для метки */
+    display: block; 
+    margin-bottom: 5px; 
 }
 
 .footer input, .footer textarea {
-    width: 90%; /* Ширина полей ввода */
-    padding: 10px; /* Отступы внутри полей */
-    border: 1px solid #ccc; /* Граница */
-    border-radius: 4px; /* Скругление углов */
-    background-color: #fff; /* Фон полей */
+    width: 90%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 0px; 
+    background-color: #fff; 
 }
 
 .button-group {
-    margin-top: 10px; /* Отступ сверху для кнопки */
+    margin-top: 10px; 
 }
 
 .footer button {
-    background-color: blue; /* Цвет кнопки */
-    color: white; /* Цвет текста кнопки */
-    padding: 10px 15px; /* Отступы внутри кнопки */
-    border: none; /* Без границы */
-    border-radius: 4px; /* Скругление углов */
-    cursor: pointer; /* Указатель при наведении */
+    background-color: blue; 
+    color: white; 
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
 }
 
 .footer button:hover {
-    background-color: darkblue; /* Цвет кнопки при наведении */
+    background-color: darkblue; 
 }
 .fade {
     opacity: 0;
@@ -161,23 +161,23 @@ h1, h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-end; /* Выравнивание по нижнему краю */
-    margin: 20px; /* Отступ вокруг галереи */
+    align-items: flex-end; 
+    margin: 20px; 
 }
 
 
 .drawing-item {
-    flex: 1 1 45%; /* Каждое изображение занимает до 45% ширины */
-    margin: 10px; /* Отступы между изображениями */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Добавление тени для визуального эффекта */
+    flex: 1 1 45%; 
+    margin: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .resizable {
-    width: 100%; /* Изображения занимают 100% ширины контейнера */
-    height: auto; /* Сохраняет пропорции изображений */
-    object-fit: cover; /* Обеспечивает заполнение контейнера */
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
 }
 
 .caption {
-    color: white; /* Caption color */
+    color: white; 
 }
